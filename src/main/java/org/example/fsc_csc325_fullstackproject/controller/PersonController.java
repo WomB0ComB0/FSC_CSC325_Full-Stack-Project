@@ -78,7 +78,9 @@ public class PersonController {
   private void addPerson() {
     String firstName = txtFirstName.getText();
     String lastName = txtLastName.getText();
+    String imageUrl = txtImageURL.getText();
     if (!firstName.isEmpty() && !lastName.isEmpty()) {
+      loadImage(imageUrl);
       personList.add(new Person(firstName, lastName));
       clearFields();
     }
@@ -98,6 +100,25 @@ public class PersonController {
       selectedPerson.setLastName(txtLastName.getText());
       tableView.refresh();
       clearFields();
+    }
+  }
+
+  private void loadImage(String imageUrl) {
+    try {
+      Image image = new Image(imageUrl);
+      imageView.setImage(image);
+    } catch (Exception e) {
+      System.err.println("Error loading image from URL: " + e.getMessage());
+      setDefaultImage();
+    }
+  }
+
+  private void setDefaultImage() {
+    try {
+      Image defaultImage = new Image(Objects.requireNonNull(getClass().getResource("/org/example/fsc_csc325_fullstackproject/images/no_profile.jpeg")).toExternalForm());
+      imageView.setImage(defaultImage);
+    } catch (Exception e) {
+      System.err.println("Error loading default image: " + e.getMessage());
     }
   }
 }
