@@ -13,5 +13,6 @@ module org.example.fsc_csc325_fullstackproject {
     requires com.almasb.fxgl.all;
 
     opens org.example.fsc_csc325_fullstackproject to javafx.fxml;
+    opens org.example.fsc_csc325_fullstackproject.controller to javafx.fxml;
     exports org.example.fsc_csc325_fullstackproject;
 }

@@ -8,6 +8,8 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import org.example.fsc_csc325_fullstackproject.person.Person;
 
+import java.util.Objects;
+
 public class PersonController {
 
   @FXML
@@ -43,8 +45,12 @@ public class PersonController {
 
   @FXML
   private void initialize() {
-    imageView.setImage(new Image("/fsc_csc325_fullstackproject/src/main/resources/images/no_profile.jpg"));
-
+    try {
+      Image image = new Image(Objects.requireNonNull(getClass().getResource("/org/example/fsc_csc325_fullstackproject/images/sample.png")).toExternalForm());
+      imageView.setImage(image);
+    } catch (Exception e) {
+      System.err.println("Error loading image: " + e.getMessage());
+    }
     personList = FXCollections.observableArrayList();
     tableView.setItems(personList);
 
