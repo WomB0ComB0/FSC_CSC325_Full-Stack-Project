@@ -34,8 +34,8 @@
 }
 
 .button {
-    -fx-background-color: #8B4513;
-    background-color: #8B4513;
-    -fx-text-fill: white;
-    color: white;
+    -fx-background-color: #9c6f2c;
+    background-color: #9c6f2c;
+    -fx-text-fill: black; /* This is to ensure the text is visible on the dark background */
+    text-fill: black;
 }

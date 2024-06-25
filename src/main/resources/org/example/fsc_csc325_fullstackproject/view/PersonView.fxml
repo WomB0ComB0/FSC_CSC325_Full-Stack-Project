@@ -16,7 +16,7 @@
     xmlns="http://javafx.com/javafx/19"
     xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.fsc_csc325_fullstackproject.controller.PersonController">
     <children>
-        <MenuBar fx:id="menuBar" prefHeight="33.0" prefWidth="675.0">
+        <MenuBar fx:id="menuBar" prefHeight="33.0" prefWidth="675.0" style="-fx-background-color: #ae591a;">
             <menus>
                 <Menu mnemonicParsing="false" text="File">
                     <items>
@@ -52,7 +52,7 @@
                 <Insets bottom="20.0" />
             </VBox.margin>
         </MenuBar>
-        <HBox prefHeight="460.0" prefWidth="886.0">
+        <HBox prefHeight="460.0" prefWidth="886.0" style="-fx-background-color: #9c6f2c;">
             <children>
                 <ImageView fx:id="imageView" fitHeight="118.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
                     <HBox.margin>
@@ -73,34 +73,34 @@
                         <Insets left="15.0" />
                     </HBox.margin>
                 </TableView>
-                <VBox fx:id="greenBox" prefHeight="489.0" prefWidth="246.0" style="-fx-background-color: #7FFF00;">
+                <VBox fx:id="greenBox" prefHeight="489.0" prefWidth="246.0" style="-fx-background-color: #74c942;">
                     <children>
-                        <TextField fx:id="txtFirstName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
+                        <TextField fx:id="txtFirstName" promptText="Enter First Name" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
                             <VBox.margin>
                                 <Insets bottom="10.0" left="20.0" top="10.0" />
                             </VBox.margin>
                         </TextField>
-                        <TextField fx:id="txtLastName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
+                        <TextField fx:id="txtLastName" promptText="Enter Last Name" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
                             <VBox.margin>
                                 <Insets bottom="10.0" left="20.0" />
                             </VBox.margin>
                         </TextField>
-                        <TextField fx:id="txtDepartment" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
+                        <TextField fx:id="txtDepartment" promptText="Enter Department" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
                             <VBox.margin>
                                 <Insets bottom="10.0" left="20.0" />
                             </VBox.margin>
                         </TextField>
-                        <TextField fx:id="txtMajor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
+                        <TextField fx:id="txtMajor" promptText="Enter Major" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
                             <VBox.margin>
                                 <Insets bottom="10.0" left="20.0" />
                             </VBox.margin>
                         </TextField>
-                        <TextField fx:id="txtEmail" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
+                        <TextField fx:id="txtEmail" promptText="Enter Email" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
                             <VBox.margin>
                                 <Insets bottom="10.0" left="20.0" />
                             </VBox.margin>
                         </TextField>
-                        <TextField fx:id="txtImageURL" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
+                        <TextField fx:id="txtImageURL" promptText="Enter Image URL" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
                             <VBox.margin>
                                 <Insets bottom="10.0" left="20.0" />
                             </VBox.margin>
