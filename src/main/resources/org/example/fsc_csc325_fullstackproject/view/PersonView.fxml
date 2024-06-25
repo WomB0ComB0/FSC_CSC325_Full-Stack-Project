@@ -1,3 +1,6 @@
+Here is the updated `PersonView.fxml` file with the correct [fx:id](file:///c%3A/users/airwo/documents/github/FSC_CSC325_Full-Stack-Project/src/main/resources/org/example/fsc_csc325_fullstackproject/view/PersonView.fxml#19%2C18-19%2C18) attributes to match the field names in your [PersonController](file:///c%3A/users/airwo/documents/github/FSC_CSC325_Full-Stack-Project/src/main/resources/org/example/fsc_csc325_fullstackproject/view/PersonView.fxml#17%2C109-17%2C109) class:
+
+```xml:src/main/resources/org/example/fsc_csc325_fullstackproject/view/PersonView.fxml
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
@@ -13,8 +16,8 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox id="mainVbox" alignment="CENTER" prefHeight="554.0" prefWidth="886.0"
-      xmlns="http://javafx.com/javafx/19"
-      xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.fsc_csc325_fullstackproject.controller.PersonController">
+    xmlns="http://javafx.com/javafx/19"
+    xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.fsc_csc325_fullstackproject.controller.PersonController">
     <children>
         <MenuBar fx:id="menuBar" prefHeight="33.0" prefWidth="675.0">
             <menus>
@@ -47,7 +50,6 @@
                         <MenuItem mnemonicParsing="false" text="Exit" />
                     </items>
                 </Menu>
-
             </menus>
             <VBox.margin>
                 <Insets bottom="20.0" />
@@ -63,8 +65,8 @@
                 <TableView fx:id="tableView" prefHeight="466.0" prefWidth="548.0">
                     <columns>
                         <TableColumn fx:id="ID" prefWidth="75.0" text="ID" />
-                        <TableColumn fx:id="First_Name" prefWidth="75.0" text="First Name" />
-                        <TableColumn fx:id="Last_Name" prefWidth="75.0" text="Last Name" />
+                        <TableColumn fx:id="firstNameColumn" prefWidth="75.0" text="First Name" />
+                        <TableColumn fx:id="lastNameColumn" prefWidth="75.0" text="Last Name" />
                         <TableColumn fx:id="Department" prefWidth="75.0" text="Department" />
                         <TableColumn fx:id="Major" prefWidth="75.0" text="Major" />
                         <TableColumn fx:id="Email" prefWidth="75.0" text="Email" />
@@ -76,65 +78,57 @@
                 </TableView>
                 <VBox fx:id="greenBox" prefHeight="489.0" prefWidth="246.0">
                     <children>
-                        <TextField fx:id="first_Input" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
+                        <TextField fx:id="txtFirstName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
                             <VBox.margin>
                                 <Insets bottom="10.0" left="20.0" top="10.0" />
                             </VBox.margin>
                         </TextField>
-                        <TextField fx:id="last_Input" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
+                        <TextField fx:id="txtLastName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
                             <VBox.margin>
                                 <Insets bottom="10.0" left="20.0" />
                             </VBox.margin>
                         </TextField>
-                        <TextField fx:id="dep_Input" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
+                        <TextField fx:id="txtDepartment" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
                             <VBox.margin>
                                 <Insets bottom="10.0" left="20.0" />
                             </VBox.margin>
                         </TextField>
-                        <TextField fx:id="major_Input" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
+                        <TextField fx:id="txtMajor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
                             <VBox.margin>
                                 <Insets bottom="10.0" left="20.0" />
                             </VBox.margin>
                         </TextField>
-                        <TextField fx:id="email_Input" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
+                        <TextField fx:id="txtEmail" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
                             <VBox.margin>
                                 <Insets bottom="10.0" left="20.0" />
                             </VBox.margin>
                         </TextField>
-                        <TextField fx:id="imageURL_Input" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
+                        <TextField fx:id="txtImageURL" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="168.0">
                             <VBox.margin>
                                 <Insets bottom="10.0" left="20.0" />
                             </VBox.margin>
                         </TextField>
                         <VBox prefHeight="85.0" prefWidth="200.0" />
-                        <Button id="clear" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="41.0" prefWidth="174.0" styleClass="bold-text" text="Clear">
+                        <Button fx:id="btnClear" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="41.0" prefWidth="174.0" styleClass="bold-text" text="Clear">
                             <VBox.margin>
                                 <Insets bottom="10.0" left="20.0" />
                             </VBox.margin>
                         </Button>
-                        <Button id="add" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="41.0" prefWidth="174.0" styleClass="bold-text" text="Add">
-                            <VBox.margin>
-                                <Insets bottom="10.0" left="20.0" />
-                            </VBox.margin>
-                        </Button>
-                        <Button id="delete" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="41.0" prefWidth="174.0" styleClass="bold-text" text="Delete">
-                            <VBox.margin>
-                                <Insets bottom="10.0" left="20.0" />
-                            </VBox.margin>
-                        </Button>
-                        <Button id="edit" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="41.0" prefWidth="174.0" styleClass="bold-text" text="Edit">
-                            <VBox.margin>
-                                <Insets bottom="10.0" left="20.0" />
-                            </VBox.margin>
-                        </Button>
+                        <Button fx:id="btnAdd" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="41.0" prefWidth="174.0" styleClass="bold-text" text="Add">
+                            <Button fx:id="btnDelete" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="41.0" prefWidth="174.0" styleClass="bold-text" text="Delete">
+                                <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" />
+                                </VBox.margin>
+                            </Button>
+                            <Button fx:id="btnEdit" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="41.0" prefWidth="174.0" styleClass="bold-text" text="Edit">
+                                <VBox.margin>
+                                    <Insets bottom="10.0" left="20.0" />
+                                </VBox.margin>
+                            </Button>
+                        </VBox>
                     </children>
                 </VBox>
             </children>
-        </HBox>
-        <HBox fx:id="gBox" prefHeight="30.0" prefWidth="886.0">
-            <VBox.margin>
-                <Insets bottom="10.0" />
-            </VBox.margin>
         </HBox>
     </children>
 </VBox>
