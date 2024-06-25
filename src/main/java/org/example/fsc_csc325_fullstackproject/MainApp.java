@@ -12,9 +12,9 @@ import java.io.IOException;
 public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/fsc_csc325_fullstackproject/view/PersonView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/org/example/fsc_csc325_fullstackproject/view/PersonView.fxml"));
         Scene scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("/fsc_csc325_fullstackproject/view/styles.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("/org/example/fsc_csc325_fullstackproject/view/styles.css").toExternalForm());
         stage.setTitle("FSC CSC325 _ Full Stack Project");
         stage.setScene(scene);
         stage.show();
