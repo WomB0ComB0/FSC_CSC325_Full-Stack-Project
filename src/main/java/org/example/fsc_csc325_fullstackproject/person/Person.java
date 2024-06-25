@@ -1,9 +1,12 @@
 package org.example.fsc_csc325_fullstackproject.person;
 
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.StringProperty;
 
 public class Person {
+    private final IntegerProperty id;
     private final StringProperty firstName;
     private final StringProperty lastName;
     private final StringProperty department;
@@ -11,13 +14,18 @@ public class Person {
     private final StringProperty email;
     private final StringProperty imageURL;
 
-    public Person(String firstName, String lastName, String department, String major, String email, String imageURL) {
+    public Person(int id, String firstName, String lastName, String department, String major, String email, String imageURL) {
+        this.id = new SimpleIntegerProperty(id);
         this.firstName = new SimpleStringProperty(firstName);
         this.lastName = new SimpleStringProperty(lastName);
         this.department = new SimpleStringProperty(department);
         this.major = new SimpleStringProperty(major);
         this.email = new SimpleStringProperty(email);
         this.imageURL = new SimpleStringProperty(imageURL);
+    }
+
+    public IntegerProperty idProperty() {
+        return id;
     }
 
     public StringProperty firstNameProperty() {
@@ -42,6 +50,14 @@ public class Person {
 
     public StringProperty imageURLProperty() {
         return imageURL;
+    }
+
+    public int getId() {
+        return id.get();
+    }
+
+    public void setId(int id) {
+        this.id.set(id);
     }
 
     public String getFirstName() {

@@ -17,17 +17,19 @@ public class PersonController {
   @FXML
   private TableView<Person> tableView;
   @FXML
+  private TableColumn<Person, Integer> idColumn;
+  @FXML
   private TableColumn<Person, String> firstNameColumn;
   @FXML
   private TableColumn<Person, String> lastNameColumn;
   @FXML
   private TableColumn<Person, String> departmentColumn;
   @FXML
-    private TableColumn<Person, String> majorColumn;
+  private TableColumn<Person, String> majorColumn;
   @FXML
-    private TableColumn<Person, String> emailColumn;
+  private TableColumn<Person, String> emailColumn;
   @FXML
-    private TableColumn<Person, String> imageURLColumn;
+  private TableColumn<Person, String> imageURLColumn;
   @FXML
   private TextField txtFirstName;
   @FXML
@@ -50,6 +52,7 @@ public class PersonController {
   private Button btnEdit;
 
   private ObservableList<Person> personList;
+  private int nextId = 1;
 
   @FXML
   private void initialize() {
@@ -62,6 +65,7 @@ public class PersonController {
     personList = FXCollections.observableArrayList();
     tableView.setItems(personList);
 
+    idColumn.setCellValueFactory(cellData -> cellData.getValue().idProperty().asObject());
     firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
     lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
     departmentColumn.setCellValueFactory(cellData -> cellData.getValue().departmentProperty());
@@ -96,7 +100,7 @@ public class PersonController {
     String email = txtEmail.getText();
     if (!firstName.isEmpty() && !lastName.isEmpty()) {
       loadImage(imageUrl);
-      personList.add(new Person(firstName, lastName, department, major, email, imageUrl));
+      personList.add(new Person(nextId++, firstName, lastName, department, major, email, imageUrl));
       clearFields();
     }
   }
@@ -119,7 +123,7 @@ public class PersonController {
       selectedPerson.setImageURL(txtImageURL.getText());
       tableView.refresh();
       clearFields();
-    } 
+    }
   }
 
   private void loadImage(String imageUrl) {
