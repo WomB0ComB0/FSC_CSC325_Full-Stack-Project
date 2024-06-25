@@ -134,7 +134,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                org.example.fsc_csc325_fullstackproject/org.example.fsc_csc325_fullstackproject.HelloApplication
+                                org.example.fsc_csc325_fullstackproject/org.example.fsc_csc325_fullstackproject.MainApp
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
