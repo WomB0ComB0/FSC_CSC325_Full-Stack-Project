@@ -96,7 +96,7 @@ public class PersonController {
     String email = txtEmail.getText();
     if (!firstName.isEmpty() && !lastName.isEmpty()) {
       loadImage(imageUrl);
-      personList.add(new Person(firstName, lastName, imageUrl, department, major, email));
+      personList.add(new Person(firstName, lastName, department, major, email, imageUrl));
       clearFields();
     }
   }
@@ -113,13 +113,13 @@ public class PersonController {
     if (selectedPerson != null) {
       selectedPerson.setFirstName(txtFirstName.getText());
       selectedPerson.setLastName(txtLastName.getText());
-        selectedPerson.setDepartment(txtDepartment.getText());
-        selectedPerson.setMajor(txtMajor.getText());
-        selectedPerson.setEmail(txtEmail.getText());
-        selectedPerson.setImageURL(txtImageURL.getText());
+      selectedPerson.setDepartment(txtDepartment.getText());
+      selectedPerson.setMajor(txtMajor.getText());
+      selectedPerson.setEmail(txtEmail.getText());
+      selectedPerson.setImageURL(txtImageURL.getText());
       tableView.refresh();
       clearFields();
-    }
+    } 
   }
 
   private void loadImage(String imageUrl) {

@@ -64,10 +64,10 @@
                         <TableColumn fx:id="ID" prefWidth="75.0" text="ID" />
                         <TableColumn fx:id="firstNameColumn" prefWidth="75.0" text="First Name" />
                         <TableColumn fx:id="lastNameColumn" prefWidth="75.0" text="Last Name" />
-                        <TableColumn fx:id="Department" prefWidth="75.0" text="Department" />
-                        <TableColumn fx:id="Major" prefWidth="75.0" text="Major" />
-                        <TableColumn fx:id="Email" prefWidth="75.0" text="Email" />
-                        <TableColumn fx:id="k" prefWidth="100" text="" />
+                        <TableColumn fx:id="departmentColumn" prefWidth="75.0" text="Department" />
+                        <TableColumn fx:id="majorColumn" prefWidth="75.0" text="Major" />
+                        <TableColumn fx:id="emailColumn" prefWidth="75.0" text="Email" />
+                        <TableColumn fx:id="imageURLColumn" prefWidth="100" text="Image URL" />
                     </columns>
                     <HBox.margin>
                         <Insets left="15.0" />
