@@ -18,7 +18,7 @@ public class MainApp extends Application {
         scene.getStylesheets()
                 .add(Objects
                         .requireNonNull(
-                                getClass().getResource("/org/example/fsc_csc325_fullstackproject/view/styles.css"))
+                                getClass().getResource("/org/example/fsc_csc325_fullstackproject/styles/styles.css"))
                         .toExternalForm());
         stage.setTitle("FSC CSC325 _ Full Stack Project");
         stage.setScene(scene);
