@@ -21,6 +21,14 @@ public class PersonController {
   @FXML
   private TableColumn<Person, String> lastNameColumn;
   @FXML
+  private TableColumn<Person, String> departmentColumn;
+  @FXML
+    private TableColumn<Person, String> majorColumn;
+  @FXML
+    private TableColumn<Person, String> emailColumn;
+  @FXML
+    private TableColumn<Person, String> imageURLColumn;
+  @FXML
   private TextField txtFirstName;
   @FXML
   private TextField txtLastName;
@@ -56,6 +64,10 @@ public class PersonController {
 
     firstNameColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
     lastNameColumn.setCellValueFactory(cellData -> cellData.getValue().lastNameProperty());
+    departmentColumn.setCellValueFactory(cellData -> cellData.getValue().departmentProperty());
+    majorColumn.setCellValueFactory(cellData -> cellData.getValue().majorProperty());
+    emailColumn.setCellValueFactory(cellData -> cellData.getValue().emailProperty());
+    imageURLColumn.setCellValueFactory(cellData -> cellData.getValue().imageURLProperty());
 
     btnClear.setOnAction(e -> clearFields());
 
@@ -79,9 +91,12 @@ public class PersonController {
     String firstName = txtFirstName.getText();
     String lastName = txtLastName.getText();
     String imageUrl = txtImageURL.getText();
+    String department = txtDepartment.getText();
+    String major = txtMajor.getText();
+    String email = txtEmail.getText();
     if (!firstName.isEmpty() && !lastName.isEmpty()) {
       loadImage(imageUrl);
-      personList.add(new Person(firstName, lastName));
+      personList.add(new Person(firstName, lastName, imageUrl, department, major, email));
       clearFields();
     }
   }
@@ -98,6 +113,10 @@ public class PersonController {
     if (selectedPerson != null) {
       selectedPerson.setFirstName(txtFirstName.getText());
       selectedPerson.setLastName(txtLastName.getText());
+        selectedPerson.setDepartment(txtDepartment.getText());
+        selectedPerson.setMajor(txtMajor.getText());
+        selectedPerson.setEmail(txtEmail.getText());
+        selectedPerson.setImageURL(txtImageURL.getText());
       tableView.refresh();
       clearFields();
     }
