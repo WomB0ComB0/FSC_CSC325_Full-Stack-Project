@@ -46,7 +46,7 @@ public class PersonController {
   @FXML
   private void initialize() {
     try {
-      Image image = new Image(Objects.requireNonNull(getClass().getResource("/org/example/fsc_csc325_fullstackproject/images/sample.png")).toExternalForm());
+      Image image = new Image(Objects.requireNonNull(getClass().getResource("/org/example/fsc_csc325_fullstackproject/images/no_profile.jpeg")).toExternalForm());
       imageView.setImage(image);
     } catch (Exception e) {
       System.err.println("Error loading image: " + e.getMessage());
